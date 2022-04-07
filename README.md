@@ -12,9 +12,9 @@ Linkedin: https://ng.linkedin.com/in/husseinat-etti-balogun-a43b1320a
 
 IRC nick: balotofi
 
-Github: (https://github.com/balotofi)
+Github: https://github.com/balotofi
 
-Gitlab:https://gitlab.com/balotofi
+Gitlab: https://gitlab.com/balotofi
 
 Phone: +234 903 215 8686
 
