@@ -28,18 +28,18 @@ Primary Language: English
 
 I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal University of Technology Akure. I have a strong interest in space exploration and have recently been reacquanited with the thrills of programming. My university is currently taking part in the national strike action with the academic staff union of universities so I can currently work for as many hours daily as possible. If we were to resume abruptly the time constraint would be limited but I would be able to give a minimum of 20hrs weekly for the GSoC project. If I am selected, I shall work around 30 hours a week on the project - unless my university resumes as stated previously, though I am open to putting in more effort if the work requires.
 
-Introduction
+### Introduction
 
 
-Technical Details
-Core Tasks:
+### Technical Details
+#### ore Tasks:
 
 
-Proposed Solutions :
+#### Proposed Solutions :
 
 
 
-Timeline
+#### Timeline
 Community Bonding Period (May 17 - June 6) :
 
 
@@ -70,12 +70,12 @@ Week 9-10-11(August 2 - August 23)
 
 
 
-Deliverables
+### Deliverables
 
 
 Proper documentation in the form of Pydocs and Blogs.
 
-Personal Inspiration for the Project
+### Personal Inspiration for the Project
 
 
-References
+### References
