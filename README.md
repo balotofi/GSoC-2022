@@ -80,7 +80,5 @@ I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal 
 2. 
 3. Proper documentation in the form of Pydocs and Blogs.
 
-### Personal Inspiration for the Project
-
 
 ### References
