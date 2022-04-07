@@ -20,7 +20,7 @@ Github: https://github.com/balotofi
 
 Gitlab: https://gitlab.com/balotofi
 
-Phone: +234 903 215 8686
+Twitter: https://twitter.com/balotofi
 
 Country of Residence: Nigeria
 
