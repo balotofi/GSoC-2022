@@ -1,8 +1,8 @@
-Google Summer of Code 2022
+# Google Summer of Code 2022
 
-CCSDS File Delivery Protocol in MicroPython
+## Generic Model - Orbital
 
-Personal Details
+### Personal Details
 
 Name: Hussenat Etti-Balogun
 
