@@ -48,41 +48,38 @@ I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal 
 
 
 
-#### Timeline
-Community Bonding Period (May 17 - June 6) :
+### Timeline
+**Community Bonding Period (May 17 - June 6)**
 
 
-Official Coding Period (June 7 - August 23)
-Week 1 (June 7 - June 13)
+*Official Coding Period (June 7 - August 23)*
+**Week 1 (June 7 - June 13)**
 
 
-
-Week 2-3 (June 14 - June 27)
-
+**Week 2-3 (June 14 - June 27)**
 
 
-Week 4 -5 (June 28 - July 11)
+**Week 4 -5 (June 28 - July 11)**
 
 
+**Phase 1 evaluation period (July 12 - July 16)**
 
-Phase 1 evaluation period (July 12 - July 16)
 
-
-Week 6-7 (July 17-25)
+**Week 6-7 (July 17-25)**
 
 
 
-Week 8 ( July 26 - August 1)
+**Week 8 ( July 26 - August 1)**
 
 
-Week 9-10-11(August 2 - August 23)
+**Week 9-10-11(August 2 - August 23)**
 
 
 
 ### Deliverables
-
-
-Proper documentation in the form of Pydocs and Blogs.
+1. 
+2. 
+3. Proper documentation in the form of Pydocs and Blogs.
 
 ### Personal Inspiration for the Project
 
