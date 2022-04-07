@@ -1,7 +1,7 @@
 # Google Summer of Code 2022
 
 ## Abstract
-> The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation > effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate  
+> The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate  
 > systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
 
 ## Personal Details
