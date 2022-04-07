@@ -10,7 +10,8 @@ University: Federal University of Technology Akure
 
 Email: hebalogun@gmail.com
 
-Linkedin: http://www.linkedin.com/in/shayan-79146519a
+Linkedin: https://ng.linkedin.com/in/husseinat-etti-balogun-a43b1320a
+
 IRC nick: balotofi
 
 Github: https://github.com/balotofi
@@ -21,7 +22,7 @@ Phone: +234 903 215 8686
 
 Country of Residence: Nigeria
 
-Timezone: IST (GMT + 0530)
+Timezone: WAT (GMT +1)
 
 Primary Language: English
 
