@@ -1,8 +1,6 @@
 # Google Summer of Code 2022
 
-## Generic Model - Orbital
-
-### Personal Details
+## Personal Details
 
 Name: Hussenat Etti-Balogun
 
@@ -27,6 +25,8 @@ Timezone: WAT (GMT +1)
 Primary Language: English
 
 I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal University of Technology Akure. I have a strong interest in space exploration and have recently been reacquanited with the thrills of programming. My university is currently taking part in the national strike action with the academic staff union of universities so I can currently work for as many hours daily as possible. If we were to resume abruptly the time constraint would be limited but I would be able to give a minimum of 20hrs weekly for the GSoC project. If I am selected, I shall work around 30 hours a week on the project - unless my university resumes as stated previously, though I am open to putting in more effort if the work requires.
+
+## Generic Model - Orbital
 
 ### Introduction
 
