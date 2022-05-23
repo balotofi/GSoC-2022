@@ -36,11 +36,11 @@ I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal 
 
 ### Technical Details
 #### Core Tasks:
-- [ ] Task 1: 
-- [ ] Task 2:
-- [ ] Task 3:
-- [ ] Task 4:
-- [ ] Task 5:
+- [ ] Task 1: Set up an environment that replicates space
+- [ ] Task 2: Create an object (spacecraft) withing space environment
+- [ ] Task 3: Create celestial body objects within space environment
+- [ ] Task 4: Create interactivity between spacecraft and celestial bodies
+- [ ] Task 5: Create disturbances (perturbations) that can interrupt interactivity
 
 
 #### Proposed Solutions :
@@ -76,8 +76,8 @@ I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal 
 
 
 ### Deliverables
-1. 
-2. 
+1. A functioning space environment
+2. Ability for spacecraft object to be controlled by user
 3. Proper documentation in the form of Pydocs and Blogs.
 
 
