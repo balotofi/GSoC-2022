@@ -11,7 +11,7 @@ University: Federal University of Technology Akure
 
 Email: hebalogun@gmail.com
 
-Linkedin: https://ng.linkedin.com/in/husseinat-etti-balogun-a43b1320a
+Linkedin: https://ng.linkedin.com/in/balotofi
 
 IRC nick: balotofi
 
