@@ -58,6 +58,7 @@ I am a final-year student pursuing a B.Eng in Mechanical Engineering at Federal 
 
 
 ### Timeline
+16 weeks (extended)
 **Community Bonding Period (May 17 - June 6)**
 
 
