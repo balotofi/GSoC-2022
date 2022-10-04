@@ -19,11 +19,11 @@ Project : [link]
 ## Core Tasks:
 The following tasks were identified at the start of the project to be completed.
 
-- [ ] Set up an environment that replicates space
-- [ ] Create an object (spacecraft) withing space environment
-- [ ] Create celestial body objects within space environment
-- [ ] Create interactivity between spacecraft and celestial bodies
-- [ ] Create disturbances (perturbations) that can interrupt interactivity
+- [ ] Create other objects {celestial bodies} - **injected from Astropy Library**
+- [ ] Define local coordinate system - **completed**
+- [ ] Define coordinate systems for planets - **completed**
+- [ ] Model trajectory of an object {propagation service} - **not started**
+- [ ] Define perturbation effects on orbit {position, velocity of object, forces applied} - **removed from scope of project**
 
 ## Technical Aspects
 
