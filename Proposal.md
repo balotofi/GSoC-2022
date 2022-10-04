@@ -8,7 +8,7 @@
 
 
 # Google Summer of Code 2022
-
+[Official accepted GSoC Proposal](https://summerofcode.withgoogle.com/media/user/6606cb8463d2/proposal/gAAAAABjPB8CarKx_E3gdRiaXdZnZs3BfR-Xy7fgQUIE-hhGpv20E88L48UOn6ZJo8g0Onn4voiN5WsqkV1oRNzGbW3DWg8ZWdUnpDwR0iHtbqw1Bh_142Q=.pdf)
 
 ## Abstract
 > The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
