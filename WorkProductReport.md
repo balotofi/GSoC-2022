@@ -11,9 +11,7 @@
 ## Contributor - Hussenat Etti-Balogun
 [Gitlab Project link](https://gitlab.com/balotofi/python-libresim/-/tree/orbital)
 
-## Generic Model - Orbital
-
-## LibreSim Abstract
+## Generic Model - Orbital Abstract
 > The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
 
 ## Core Tasks:
