@@ -37,6 +37,10 @@ For developing the code, below mentioned technologies were used.
 
 [Element](https://element.io/) - messaging platform where all communications were made
 
+
+## Scope of Project
+The UML diagram below shows the intended 
+
 ## Reflections
 
 During the first phase, we spent time reading the ESA documentation on how the generic platform was supposed to be put together. Documents like the SMP Handbook, Software Design Document (SDD) etc. After a general understanding was obtained, the task to create a basic coordinate system was issued. After initially starting with the propagator and discussing with both mentors, the package Astropy was chosen to be used to create the coordinate systems (as it had the frames, planets, calculations needed).
@@ -45,7 +49,11 @@ During the second phase, my mentor found that we had interpreted the initial ora
 
 The major roadblock I had was the overall architecture of the project. How the individual parts were suppoed to be setup, and work together within the project. Being able to conceptualise how things should fit together and think of the pseudocode was also a little trying.
 
+
+### Takeaways
 Overall, it was a fun journey. I would thank my mentors Artur, Juanlu, and my fellow gsocer Hrishit, for guiding me throughout the project. I enjoyed learning a whole bunch of new things and writing useful codes.
 
 ## Merge Requests
+The only lasting contributuion I had to the code base was manually merged and therefore has no merge request tag.
 
+<img![libresim planets Class diagram](https://user-images.githubusercontent.com/100206676/194261522-ca0aedc2-999e-41d4-a9ec-5bf771189d9c.png) width=500/> 
