@@ -40,7 +40,7 @@ For developing the code, below mentioned technologies were used.
 
 ## Scope of Project
 The UML diagram below shows the intended 
-![libresim planets Class diagram](https://user-images.githubusercontent.com/100206676/194261522-ca0aedc2-999e-41d4-a9ec-5bf771189d9c.png)
+![libresim Class diagram](https://user-images.githubusercontent.com/100206676/194293900-2875a911-6933-42c5-85a5-b8d18a170e57.png)
 
 ## Reflections
 
@@ -56,5 +56,6 @@ Overall, it was a fun journey. I would thank my mentors Artur, Juanlu, and my fe
 
 ### Merge Requests
 The only lasting contributuion I had to the code base was manually merged and therefore has no merge request tag.
+
 
 
