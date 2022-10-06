@@ -61,7 +61,7 @@ UML
 Debugging
 Astrodynamics Theory
 
-Having not done a
+Having only used a UML diagram once for the rough schema of personal project, I was relatively new to the concept. I was given the task of creating a UML diagram for the project so that I may be able to understand it better when blocked.
 
 
 Overall, it was a fun journey. I would thank my mentors Artur, Juanlu, and my fellow gsocer Hrishit, for guiding me throughout the project.
