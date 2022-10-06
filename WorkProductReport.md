@@ -39,7 +39,9 @@ For developing the code, below mentioned technologies were used.
 
 
 ## Scope of Project
-The UML diagram below shows the intended 
+The UML diagram below shows the current architechure of the system and how the objects are made to interact with each other. 
+The basis of the orbital system is the coordinate systems and how each planet can dictate the coordinate system it is deriving from the coordinate system tree. In the do_update method of the planet is where the appropriate calculations are put to use to update the position and rotation of the planet within each derived coordinate system.
+
 ![libresim Class diagram](https://user-images.githubusercontent.com/100206676/194293900-2875a911-6933-42c5-85a5-b8d18a170e57.png)
 
 ## Reflections
