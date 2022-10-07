@@ -27,13 +27,14 @@ The following tasks were identified at the start of the project to be completed.
 
 For developing the code, below mentioned technologies were used.
 
-[Python](https://www.python.org/) - programming language that the whole project uses
+[Python](https://www.python.org/) - programming language that the whole project uses. The LibreSim project is written in pure python with use of astronomical packages to aid in complex calculations.
 
-[Skyfield](https://rhodesmill.org/skyfield/) - a python astronomy package used to compare positions values from code
+[Skyfield](https://rhodesmill.org/skyfield/) - a python astronomy package used to compare positions values from code. This library was used to calculate the positions of the planets within derived corresponding coordinate systems. After trying the more widely used astronomy library to calculate positions, it was found that the same could be done with SkyField using fewer lines of code.
+Not being able to access the JPL ephemeride files that SkyFeild uses ws anothoer reason for my reluctance in using it. The files had to be manually sent to me so that I could use the `Loader` function to access the values within them.
 
-[Astropy](https://www.astropy.org/) - python astronomy package used for the majority of the calculations
+[Astropy](https://www.astropy.org/) - python astronomy package used for the majority of the calculations. Because of my lack of familiarity with SkyField, and having already written code previously for the calculation of object rotations in the same coordinate systems derived in the Earth class, the code was reused. The code was previously scrapped due to restructuring. There is more variety in the coordinate frames and reference frames in this library. 
 
-[SciPy](https://scipy.org/) - scientific computation library used for additional complex calculations
+[SciPy](https://scipy.org/) - scientific computation library used for additional complex calculations. When calculating the transformation of the positions into quaternions. 
 
 [Element](https://element.io/) - messaging platform where all communications were made
 
@@ -57,12 +58,21 @@ The only lasting contributuion I had to the code base was manually merged and th
 
 ### Takeaways
 I learned three major things in the course of this project
-UML 
-Debugging
-Astrodynamics Theory
+
+1. UML 
+2. Debugging
+3. Astrodynamics Theory
 
 Having only used a UML diagram once for the rough schema of personal project, I was relatively new to the concept. I was given the task of creating a UML diagram for the project so that I may be able to understand it better when blocked.
 
+Internship description
+My role at LibreCube was to build the orbital module. I worked directly with Juanlu in [internship responsibilities].
+
+During my internship experience with [Company Name], I was able to develop my [skills]. I particularly found [experiences] to be useful in improving my [skill]. Although I found [experience] to be challenging, I found it to be valuable in developing my [skill].
+Ongoing consideration
+While I had many useful experiences at [Company Name], I feel that I still need to develop my confidence levels with [task]. I would have enjoyed more time completing [task].
+In conclusion, [details].
 
 Overall, it was a fun journey. I would thank my mentors Artur, Juanlu, and my fellow gsocer Hrishit, for guiding me throughout the project.
+
 
