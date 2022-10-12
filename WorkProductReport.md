@@ -1,78 +1,262 @@
-<div id="header" align="center">
-<img src="https://user-images.githubusercontent.com/100206676/171044355-a1331115-6368-40f7-8061-3179192dca81.png"![logo_librecube_1604]() width="400"/>
-</div>
 
-<div id="header" align="center">
-<img src="https://user-images.githubusercontent.com/100206676/171044297-58d64ef7-38e2-4d20-9a14-3c9d04083eb1.png"![gsoc]() width="500"/>
-</div>
+Husseinat Etti-Balogun
 
-# Google Summer of Code 2022
-
-## Contributor - Hussenat Etti-Balogun
-[Gitlab Project link](https://gitlab.com/balotofi/python-libresim/-/tree/orbital)
-
-## Generic Model - Orbital Abstract
-> The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
-
-## Core Tasks:
-The following tasks were identified at the start of the project to be completed.
-
-- [ ] Create celestial body objects - **injected from Astropy Library**
-- [ ] Define local coordinate system - **completed**
-- [ ] Define coordinate systems for planets - **completed**
-- [ ] Model trajectory of an object {propagation service} - **not started**
-- [ ] Define perturbation effects on orbit {position, velocity of object, forces applied} - **removed from scope of project**
-
-## Technical Aspects
-
-For developing the code, below mentioned technologies were used.
-
-[Python](https://www.python.org/) - programming language that the whole project uses. The LibreSim project is written in pure python with use of astronomical packages to aid in complex calculations.
-
-[Skyfield](https://rhodesmill.org/skyfield/) - a python astronomy package used to compare positions values from code. This library was used to calculate the positions of the planets within derived corresponding coordinate systems. After trying the more widely used astronomy library to calculate positions, it was found that the same could be done with SkyField using fewer lines of code.
-Not being able to access the JPL ephemeride files that SkyFeild uses ws anothoer reason for my reluctance in using it. The files had to be manually sent to me so that I could use the `Loader` function to access the values within them.
-
-[Astropy](https://www.astropy.org/) - python astronomy package used for the majority of the calculations. Because of my lack of familiarity with SkyField, and having already written code previously for the calculation of object rotations in the same coordinate systems derived in the Earth class, the code was reused. The code was previously scrapped due to restructuring. There is more variety in the coordinate frames and reference frames in this library. 
-
-[SciPy](https://scipy.org/) - scientific computation library used for additional complex calculations. When calculating the transformation of the positions into quaternions. 
-
-[Element](https://element.io/) - messaging platform where all communications were made
+Work Product Report
+ 
+Mentors
+Artur Scholz
+Juan Luis Cano Rodriguez			
 
 
-## Scope of Project
-The UML diagram below shows the current architechure of the system and how the objects are made to interact with each other. 
-The basis of the orbital system is the coordinate systems and how each planet can dictate the coordinate system it is deriving from the coordinate system tree. In the do_update method of the planet is where the appropriate calculations are put to use to update the position and rotation of the planet within each derived coordinate system.
+PREFACE & ACKNOWLEDGEMENTS
 
-![libresim Class diagram](https://user-images.githubusercontent.com/100206676/194293900-2875a911-6933-42c5-85a5-b8d18a170e57.png)
+For four months from June to September 2022, I did an internship at LibreCube, an open-source space and earth exploration initiative. LibreCube’s core vision is to enable everyone to get involved in building systems for the exploration of near and remote locations using open-source hardware and software. This internship project is a part of an overarching LibreSim project that aims to simulate satellite usage in space.
 
-## Reflections
+I worked on a project to replicate the orbital components of a simulator. The main content of the project is to model standardized components and services to replicate satellite equipment (object motion) in space. This topic suits my major in mechanical engineering, my interest in the space sector and newfound interest in software development.
+Through the assignment, I did not only gain a lot of knowledge but more importantly, I also had a great chance to sharpen my skills in a professional working environment. Not less important than the astrodynamics terms that I have learnt is the communication skills that I have been trained and practiced through giving presentations in the form of progress updates, and discussing with my mentors.
+I am very appreciative of Artur Scholz and Juan Luis, my mentors at LibreCube. Juan gave me very on-time valuable 	instructions and gave me extensive guidance regarding many practical issues. My gratitude goes to Artur for his encouragements and instructions during my internship period. He gave me feedback on my work and encouraged progress presentations in which I could present my progress to other contributors and organisation members.
+With their patience and openness, my mentors created an enjoyable working environment.
+Throughout the internship, I have also learnt many things about the ESA center in Germany whose benefits are far beyond what I could learn in another project. 
+Lastly, I would like to thank members of the Open Source Community Africa (OSCA) for introducing me to this great opportunity in which I have developed myself academically, professionally and socially.
+ 
+Table of contents 
 
-During the first phase, we spent time reading the ESA documentation on how the generic platform was supposed to be put together. Documents like the SMP Handbook, Software Design Document (SDD) etc. After a general understanding was obtained, the task to create a basic coordinate system was issued. After initially starting with the propagator and discussing with both mentors, the package Astropy was chosen to be used to create the coordinate systems (as it had the frames, planets, calculations needed).
 
-During the second phase, my mentor found that we had interpreted the initial oragnisation of the coordinate system part of the architecture wrong and and changed it accordingly. I moved on to creating the logic to callculate and output the planet positions within the three initial coordinate systems.
+List of Figures.................................................................................................................iv 
+List of Abbreviations......................................................................................................iv 
 
-The major roadblock I had was the overall architecture of the project. How the individual parts were suppoed to be setup, and work together within the project. Being able to conceptualise how things should fit together and think of the pseudocode was also a little trying.
+Chapter 1: Introduction........................................................................................................1 
+1.1 Problem statement and project objectives................................................................1 1.1.1 Problem statement .................................................................................................1
+1.1.2 Project Objectives ..................................................................................................2 
+1.2 Organisation of this report .....................................................................................2 
 
-### Merge Requests
-The only lasting contributuion I had to the code base was manually merged and therefore has no merge request tag.
+Chapter 2: 
+Technical descriptions...............................................................................3
+2.1 Description of platform standards...........................................................................3     
+2.2 Python.......................................................................................................................4 
+2.3 SkyField.....................................................................................................................4 
+2.4 SciPy .........................................................................................................................4 
+2.5 AstroPy.....................................................................................................................4 
 
-### Takeaways
-I learned three major things in the course of this project
+Chapter 3: 
+Activity Log......................................................................................................... 5 
+3.1 Biweekly activities ....................................................................................................5-8
+3.2 Research done...........................................................................................................9
+3.2.1 Ephemerides...........................................................................................................9
+3.2.2 Issue reporting on GitHub....................................................................................9
+3.2.3 Coordinate Systems...............................................................................................9
+3.2.4 Quaternions...........................................................................................................10
+3.2.5 Rebasing................................................................................................................10
+3.3 Overview of module with UML...............................................................................11 
+3.4 Feedback from midterm evaluation and reflections..............................................12
+3.4.1 Feedback from midterm evaluation …………………...............................................12
+3.4.2 Reflections.............................................................................................................12
 
-1. UML 
-2. Debugging
-3. Astrodynamics Theory
+Chapter 4: 
+Conclusion and future work ............................................................... 13 
+4.1 Conclusion.................................................................................................................13
+4.2 Future Work...............................................................................................................14
 
-Having only used a UML diagram once for the rough schema of personal project, I was relatively new to the concept. I was given the task of creating a UML diagram for the project so that I may be able to understand it better when blocked.
+References....................................................................................................................... 15
+ 
+List of Figures
 
-Internship description
-My role at LibreCube was to build the orbital module. I worked directly with Juanlu in [internship responsibilities].
+Figure 1	Model of Initial Project Objectives…………………………	2
+Figure 2	The UML Diagram…………………………………………….…	11
+Figure 3	Accomplished Sections Diagram…………………………...	13
 
-During my internship experience with [Company Name], I was able to develop my [skills]. I particularly found [experiences] to be useful in improving my [skill]. Although I found [experience] to be challenging, I found it to be valuable in developing my [skill].
-Ongoing consideration
-While I had many useful experiences at [Company Name], I feel that I still need to develop my confidence levels with [task]. I would have enjoyed more time completing [task].
-In conclusion, [details].
 
-Overall, it was a fun journey. I would thank my mentors Artur, Juanlu, and my fellow gsocer Hrishit, for guiding me throughout the project.
+List of Abbreviations 
 
+Abbreviation	Meaning	
+SMP	Simulation Modelling Platform	
+SDD	Software Design Document	
+ESA	European Space Agency	
+EGOS	ESA Ground Operation System 	
+ECSS	European Cooperation of Space Standardisation	
+ICD	Interface Component Document	
+LEO	Low Earth Orbit	
+API	Application Programming Interface 	
+JPL	Jet Propulsion Laboratory 	
+NGO	Non- governmental organization	
+NASA	National Aeronautics and Space Administration 	
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 	
+“The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
+” – Project Abstract
+ 
+
+1.1.2 Project Objectives
+The structure of the project was already padded out in the proposal submitted. Artur made it clear that it wasn’t necessary to finish everything that was proposed but to start with what was necessary initially. So it was decided to aim to do the coordinate system service, create the celestial body class to hold the planet properties, create planet instance classes that would inherit for the celestial body class, create an orbit propagator class that would output the satellite movement from one position to another within a given time frame, and if possible create a small body class to emulate moons, asteroids, comets, etc.
+
+Figure 1 shows the intended working principle of the orbital module. The coloured boxes indicate those sections that were expected to be completed over the four-month duration of the summer internship. They are as follows;
+•	Coordinate system
+•	Celestial bodies
+•	Orbit propagator
+•	Small body
+  
+ 
+Figure 1 Model of Initial Project Objectives
+
+1.2 Organisation of this report.
+The report is organized as follows. Chapter 2 will introduce technical descriptions about the related concepts such as the generic simulation platform standard guides, packages used like SciPy and AstroPy. Chapter 3 is about communications between my mentors and I, the work generated on a bi-weekly basis, and reflections on my functioning, the unexpected circumstances and the learning goals achieved during the internship. Finally, I give a conclusion on the internship and future work in Chapter 4 according to my initial goals.
+
+ 
+ 	
+This chapter describes the concept and architecture of ESA standards guides, as well as the motivation of using certain astronomy packages. An important part of the module which supports the rotational elements is the scientific computation library called SciPy which will also be explained within this chapter. This chapter takes text from the official documents of the European Cooperation for Space Standardisation and European Space Agency guides [5,6] and published documents of the Python package owners.
+
+This chapter is organized as follows: Section 2.1 describes the generic simulation platform standards. Section 2.2 explains the use of the programming language Python briefly. Section 2.3 explains the concept of SkyField and the reasoning behind the preference of one astronomy package over the other. Section 2.4 talks about the computing package SciPy. Finally, Section 2.5 gives a description about AstroPy.
+
+2.1 Description of platform standards
+During the first phase of the project, I spent time reading the ESA documentation on how the generic platform was supposed to be put together. Documents like the ESA SMP Handbook, Software Design Document (SDD) etc. 
+
+The ECSS Standards intended to be applied together for the management, engineering and product assurance in space projects and applications. The standard defined terms of what shall be accomplished, rather than terms of how to organize and perform the necessary work. [5]
+
+The SMP2 Handbook provided a high-level view of SMP2 and introduced all its concepts together with their realisation in C++ so I had to map the definitions and examples to Python. As a handbook, this document was less formal than the other specification documents. [6]
+
+ESA Ground Operations System SDD and ICD) pinpointed the exact schema required for the generic modelling of such a platform as what we intended to build. It was very helpful in terms of understanding exactly what components were needed. My hiccup was having to translate it into code because I didn’t fully understand how to read the UML diagrams and interpret the descriptions at that time.
+
+ 2.2 Python 
+The LibreSim project is written in pure python with use of additional astronomical packages to aid in complex calculations within the orbital module. The programming language is commonly used in the space sector and is something I was familiar with before beginning the project.
+
+2.3 SkyField
+SkyField is a Python astronomy package used to compare positions values from code. This library was used to calculate the positions of the planets within derived corresponding coordinate systems. After trying the more widely used astronomy library to calculate positions (AstroPy), it was found that the same could be done with SkyField using fewer lines of code. It was not as easy to do coordinate system transformations with this package though.
+
+2.4. SciPy 
+SciPy is a scientific computation library used for additional complex calculations. When calculating rotations through the transformation of the positions vectors into quaternions, this package came in very handy. It eased the complexities of the transformations and representations.
+
+2.5 AstroPy
+AstroPy is a python astronomy package used for the majority of the calculations. Because of my lack of familiarity with SkyField, and having already written code previously for the calculation of object rotations in the same coordinate systems derived in the Earth class, the code was reused. There is more variety in the coordinate frames, reference frames and capabilities of this library.
+
+
+
+
+
+ 	
+
+
+ 
+
+ 	
+      	 
+
+
+ 	
+
+
+
+      	 
+
+
+ 	
+    	 
+
+ 
+3.2 Research done 
+A lot of the knowledge I acquired over the course of these 4 months was academic in terms of the fundamental subject matter and not actual coding logic. As stated in section 3.1 previously, I had to research a lot of concepts prior to being able to understand how it would translate to code. The following text illustrates the research I did and the knowledge I gained from it.
+
+3.2.1 Ephemerides
+Prior to contributing to this project, I didn’t know what ephemerides were. This project was heavily founded on planetary data gotten from the National Aeronautics and Space Administration (NASA) Jet Propulsion Laboratory (JPL) Application Programming Interface (API) that constituted the ephemeris files. At the beginning of the project, a question that Juan brought up was which ephemerides file we should use and I didn’t know that there were different types or the reasons for the differences. Over the course of this project I have used three ephemeris files. When using AstroPy I only had to state within the code to use the default JPL ephemerides file but when using SkyField, because the files could not be downloaded due to my location, Artur and Juan had to download the files `de421.bps` and `de440s.bps` and send to me so I could manually load from my local file path.
+
+3.2.2 Issue reporting on GitHub 
+I said in section 3.1 that I ran into issues with my VSCode identifying and running my Python interpreter. I had never experienced such before and it seemed to be due to the virtual environment I was using but I didn’t know how to fix it. After a session with Juan where we couldn’t find a solution, he suggested I file an issue on the VSCode GitHub repository (something I had never done before). Though the issue has not been totally resolved, I am now capable and comfortable with posting issues when I run into technical errors with an open source software on the appropriate repository.
+
+3.2.3 Coordinate Systems
+When researching which coordinate systems to initially model, I found that there were five main coordinate systems, being the horizontal, equatorial, ecliptic, galactic and supergalactic systems. Each coordinate system named after its choice of fundamental plane.
+
+As I tried to figure out which coordinate system to use, I came across the term ‘reference frame’ which led me into another spiral of research that honestly left me more confused than when I started. After reading more about the difference on several separate occasions, it finally stuck.
+
+
+3.2.4 Quaternions
+Before I had gotten the program to output the position vectors, the rotations were stated to be vectors, after some restructuring early on, these values changed to quaternions – a word I’d never seen before -  and I found myself having to learn what they were before I could fully understand how output rotations in that representation.
+
+I repeatedly watched the YouTube channel 3Blue1Brown’s half-hour and 5 minute videos that explained the concept of quaternions as a 4d number system in our 3d space. The visualisation tool on the website that Ben Eater created and they reference was also a major help in solidifying the concept for me.
+
+Understanding the application of the system and reading the SciPy documentation on how the different methods transformed Euler angles, rotation vectors, matrices and other values into quaternions also helped greatly.
+
+3.2.5 Rebasing 
+Due to the nature of the structure of the branches in the organisations, repository, I had to learn how to rebase because there would often be time when commits would be made to the main develop branch that affected the structure of the files and I would have to make my commits on top of those.
+The concept of rebasing was very confusing to me at first but after frequently having to check back to my trusted website, I got the hang of it. 
+
+
+
+
+
+
+
+ 
+3.4 Feedback from midterm evaluation and Reflections
+In this section I reflect on the internship in terms of my attitude towards it and feedback from my first evaluation. Regarding my initial goals, I shortly discuss my experiences; if I have achieved my goal, whether I experienced difficulties and what I think I have to improve. 
+
+3.4.1 Feedback from midterm evaluation
+From my initial feedback I learned that I needed to improve certain skills and knowledge to work in a professional environment.
+
+Although you learn and develop the necessary skills and knowledge while working in an organization, there are several things that I could improve already. I was not totally clear on what exactly I need to do in terms of writing code to reach my project goals. Therefore, during the project, I had some difficulties to determine tasks that I could carry out. 
+
+In advance of my internship I talked with Artur about the project in which I could participate and my less-than-rudimentary knowledge in astronomy, however clear agreements on my activities were not made. A more assertive attitude from my side could have helped. To prevent uncertainties in future projects I will pay more attention to making clear agreements and back-up plans.
+
+Other aspects to which I want to pay attention in general are: defining a clear action plan and determine what knowledge is suitable. Also in the internship I have seen that it is important to have your exact coding tasks clear, because it guides you in the process. 
+
+
+3.4.2 Reflections
+At the beginning I did not have any experience of working with a non- governmental organization (NGO). Trying to operate as a non-profit entity, I saw the importance of financial support and personal capacity. The dependence on extern institutions and the need to have a flexible but disciplined attitude. During the contribution stage I also experienced spontaneous fluctuations in the codebase. At first instance unannounced changes were annoying, but it forced me to be flexible and to see what other things I could do.
+
+More than I had expected I experienced communication difficulties. This was completely one-sided and not the fault of my mentors at all because they put so much effort into creating a welcoming space for me to ask anything. But I often needed multiple (more than three) explanations on the same thing to fully understand and didn’t want to burden them. To contribute more to projects and to progress faster, I want to learn to make a more confident impression and to express my ideas and opinions more certain.
+
+ 
+ 	
+In conclusion, the internship was a useful experience. I have find out what my strengths and weaknesses are; I gained new knowledge and skills and met many new people. I achieved many of my learning goals, however for some the conditions did not permit to achieve them as I wanted. I got insight into what working with an NGO is like.
+
+ 
+
+
+4.2 Future Work
+Since I was not able to finish the intended aim of the project, I plan to continue with the organisation to try to reach the goals initially proposed over the next month. Then continue to contribute to the project in whatever capacity I can indefinitely.
+
+ 
+References
+
+[1] List of CubeSats. (2022, September 03). Wikimedia Foundation.
+      https://en.wikipedia.org/wiki/List_of_CubeSats.
+
+[2] Chantal Cappelletti, Daniel Robson, Cubesat Handbook,
+      Academic Press, 2021, Pages 53-65, ISBN 9780128178843,
+      https://doi.org/10.1016/B978-0-12-817884-3.00002-3.
+      (https://www.sciencedirect.com/science/article/pii/B9780128178843000023)
+
+[3] Justin Morris et. Al. Simulation-To-Flight (STF-1): A Mission to Enable CubeSat
+      Software-based Validation and Verification, January 2016
+      DOI:10.2514/6.2016-1464
+      Conference: 54th AIAA Aerospace Sciences Meeting, AIAA SciTech At: San Diego, CA
+      Volume: AIAA 2016-1464[4]
+
+[4] CubeSats Overview. (2018, 14 Feb). In NASA.
+       https://www.nasa.gov/mission_pages/cubesats/overview
+
+[5] European Cooperation for Space Standardisation, Space engineering, Simulation Modelling Platform, ECSS-E-ST-40-07C, 2 March 2020
+
+[6] SMP 2.0 Handbook, European Space Agency Directorate of Operations And Infrastructure, EGOS-SIM-GEN-TN-0099, Issue 1 Revision 2,28 October 2005
+
+
+
+
+
+
+ 
+
+"Astronomy compels
+ the soul to look upward, and leads us from this world to another."
+
+ 
 
