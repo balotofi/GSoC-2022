@@ -30,17 +30,14 @@ With their patience and openness, my mentors created an enjoyable working enviro
 Throughout the internship, I have also learnt many things about the ESA center in Germany whose benefits are far beyond what I could learn in another project. 
 Lastly, I would like to thank members of the Open Source Community Africa (OSCA) for introducing me to this great opportunity in which I have developed myself academically, professionally and socially.
  
- 
 ### List of Figures
 
 - Figure 1	Model of Initial Project Objectives
 - Figure 2	The UML Diagram
 - Figure 3	Accomplished Sections Diagram
 
-
 ### List of Abbreviations 
 
-Abbreviation	Meaning	
 - SMP:	Simulation Modelling Platform	
 - SDD:	Software Design Document	
 - ESA:	European Space Agency	
