@@ -27,7 +27,7 @@ Throughout the internship, I have also learnt many things about the ESA center i
 Lastly, I would like to thank members of the Open Source Community Africa (OSCA) for introducing me to this great opportunity in which I have developed myself academically, professionally and socially.
  
  
-###List of Figures
+### List of Figures
 
 - Figure 1	Model of Initial Project Objectives
 - Figure 2	The UML Diagram
@@ -53,7 +53,7 @@ Abbreviation	Meaning
 > The orbit module provides means to model orbital/trajectory movement of an object in the solar system and includes the calculation of planet positions, perturbation effects on the orbit. It computes the position and velocity of the object, taking into account the forces applied. It also defines a number of generic coordinate systems, including one for each planet and a local one for the object (spacecraft) to be modelled.
  – Project Abstract
 
-# Introduction
+# 1. Introduction
 
 ## 1.1 Problem statement and project objectives 
 
@@ -86,6 +86,8 @@ This chapter describes the concept and architecture of ESA standards guides, as 
 
 This chapter is organized as follows: Section 2.1 describes the generic simulation platform standards. Section 2.2 explains the use of the programming language Python briefly. Section 2.3 explains the concept of SkyField and the reasoning behind the preference of one astronomy package over the other. Section 2.4 talks about the computing package SciPy. Finally, Section 2.5 gives a description about AstroPy.
 
+# 2. Technical descriptions
+
 ## 2.1 Description of platform standards
 
 During the first phase of the project, I spent time reading the ESA documentation on how the generic platform was supposed to be put together. Documents like the ESA SMP Handbook, Software Design Document (SDD) etc. 
@@ -112,7 +114,42 @@ SciPy is a scientific computation library used for additional complex calculatio
 
 AstroPy is a python astronomy package used for the majority of the calculations. Because of my lack of familiarity with SkyField, and having already written code previously for the calculation of object rotations in the same coordinate systems derived in the Earth class, the code was reused. There is more variety in the coordinate frames, reference frames and capabilities of this library.
 
- 
+# 3. Activity Log
+
+This chapter is the core of the report, where the work done and knowledge gained are introduced and expatiated upon. The goal of this chapter is to show the application of the platform simulation guidelines on the object models that have been defined in chapter 2 with support of the language specific packages.
+
+The main contribution of this chapter and also of this report is to demonstrate the effort put into understanding the purpose of the project and using that knowledge to build the capability of the platform.
+
+## 3.1 Biweekly activities
+
+This section is about the experiences had over the duration of the project and includes background information on the internship, the lessons and skills learned.
+
+It summarises the contribution period and covers critical areas of information. The logs cover the period of sixteen weeks of activities with progress made every two weeks which included meetings attended, research conducted, discussions with other contributors and software used to complete tasks.
+
+### Month 1-2 
+
+| WEEK  | ACTIVITY  |  
+|---|---|
+| WEEK 1- 2  | [Jun 13-25] - Because there was no assigned tasks or structured meeting times within the first two weeks, I spent that time creating the functions from scratch. I got the functions from the ESA SMP handbook which is a guide that we were using to structure the platform as discussed in Chapter 2. Initially, that was what I was doing - defining function and creating classes based off of those generic instructions. | 
+| WEEK 2-4  | [Jun 27- Jul 9] - I had a meeting with Juan where we had a mini code review to make sure that I was doing the correct thing. We pivoted to the Orbit Propagator and he introduced me to PoliAstro (which we decided would be the best package to use for the propagation). I had trouble running it in VSCode due to a virtual environment installation issue. Artur’s feedback on my code was that I didn't need to implement the ICD word for word, that I just needed to do things that helped complete the defined tasks. He then assigned my first task to create basic coordinate systems classes so I first had to find out the different types of coordinate systems.| 
+| WEEK 4-6  | [Jul 11-23] - I was unaware how to implement it from scratch so Artur created it to work with the simulators architecture and assigned me to calculate the position vector of Earth as seen in the Sun coordinates system and that logic was to go into the `do_update` method of the derived coordinate system class. I reached out to a fellow contributor Hrishit who was working on the electrical module, so that he might explain the mapping from the design documents to Python for me.| 
+
+### Month 2-3 
+
+|  WEEK | ACTIVITY  |  
+|---|---|
+| WEEK 6-8  | [Jul 25- Aug 6] - I got the position vectors updating but was getting some negative values and doubted their correctness. Juan suggested using SciPy’s transform rotation method to calculate the rotations. I had to do some research on what a quaternion was (the method of representation of the rotations). SciPy also has a method called `as_quat` that represents matrices, vectors, or Euler angle values as quaternions. I later started getting quantity conversion issues when subtracting positions from transformed vectors.| 
+| WEEK 8-10  | [Aug 8-20] - I created a merge request because I had finally got rotations outputting values in a coordinate system and I wanted to do the same for other coordinate systems. The code was manually merged. The mid-term evaluations fell during this time. I had frequent hospital visits at the time and travelled cross-country for personal reasons.| 
+| WEEK 10-12  | [Aug 22- Sept 3] - Artur did some architecture restructuring because it was understood that the way we had implemented the coordinate system was incorrect. My code that computed positions was compared to values from another package (SkyField) and the results were different so I had to correct it. Late August was when I was finally able to write code that computed similar values to SkyField for the position vectors with the appropriate coordinate systems. Artur then asked me to create a UML diagram for the module as he thought it would be helpful in understanding the concept of the architecture a little bit better.|
+
+### Month 4
+
+|  WEEK | ACTIVITY  |  
+|---|---|
+| WEEK 12-14  | [Sept 5-17] - Since the coordinate system layout was now a service where coordinate systems could only be registered, I needed to replicate my previous code in individual planet files so that they would be the ones printing the positions and rotations.
+Again, I thought I had to build it from scratch so I created the celestial body IDs using an enumerations class before being reminded that the package AstroPy already had necessary planetary data.| 
+| WEEK 14-16  | [Sept 19- Oct 1] - I had a meeting with Artur where he sent me some links to code that was not part of the simulator but still within the LibreCube system that I could use to calculate the rotations. I got the position vectors running with a minor bug and then I fell ill and took an excuse to take time off to recuperate. I was unable to download JPL ephemerides files because of my location so they were sent them to me through WeTransfer. The week after, I got rotations running as well and created a merge request that was reviewed by Juan.| 
+
 ## 3.2 Research done 
 
 A lot of the knowledge I acquired over the course of these 4 months was academic in terms of the fundamental subject matter and not actual coding logic. As stated in section 3.1 previously, I had to research a lot of concepts prior to being able to understand how it would translate to code. The following text illustrates the research I did and the knowledge I gained from it.
