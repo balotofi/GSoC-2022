@@ -1,5 +1,9 @@
 
-# GSoC Work Product Report
+# GSoC 2022 Work Product Report
+
+Organization
+
+[LibreCube](https://librecube.org/)
 
 Contributor : 
 
@@ -75,8 +79,7 @@ Figure 1 shows the intended working principle of the orbital module. The coloure
 -	Orbit propagator
 -	Small body
   
- 
-Figure 1 Model of Initial Project Objectives
+![Model of Initial Project Objectives](https://user-images.githubusercontent.com/100206676/195456237-4e3035d3-5c1a-4a85-83d1-2aeffc8e40da.png)
 
 ## 1.2 Organisation of this report.
 
@@ -146,8 +149,7 @@ It summarises the contribution period and covers critical areas of information. 
 
 |  WEEK | ACTIVITY  |  
 |---|---|
-| WEEK 12-14  | [Sept 5-17] - Since the coordinate system layout was now a service where coordinate systems could only be registered, I needed to replicate my previous code in individual planet files so that they would be the ones printing the positions and rotations.
-Again, I thought I had to build it from scratch so I created the celestial body IDs using an enumerations class before being reminded that the package AstroPy already had necessary planetary data.| 
+| WEEK 12-14  | [Sept 5-17] - Since the coordinate system layout was now a service where coordinate systems could only be registered, I needed to replicate my previous code in individual planet files so that they would be the ones printing the positions and rotations. Again, I thought I had to build it from scratch so I created the celestial body IDs using an enumerations class before being reminded that the package AstroPy already had necessary planetary data.| 
 | WEEK 14-16  | [Sept 19- Oct 1] - I had a meeting with Artur where he sent me some links to code that was not part of the simulator but still within the LibreCube system that I could use to calculate the rotations. I got the position vectors running with a minor bug and then I fell ill and took an excuse to take time off to recuperate. I was unable to download JPL ephemerides files because of my location so they were sent them to me through WeTransfer. The week after, I got rotations running as well and created a merge request that was reviewed by Juan.| 
 
 ## 3.2 Research done 
@@ -182,6 +184,17 @@ Understanding the application of the system and reading the SciPy documentation 
 Due to the nature of the structure of the branches in the organisations, repository, I had to learn how to rebase because there would often be time when commits would be made to the main develop branch that affected the structure of the files and I would have to make my commits on top of those.
 The concept of rebasing was very confusing to me at first but after frequently having to check back to my trusted website, I got the hang of it. 
 
+## 3.3 Overview of module with UML 
+
+![libresim Class diagram](https://user-images.githubusercontent.com/100206676/195455495-16480f43-9ab9-4cce-a09e-9fefea322230.png)
+
+The UML diagram above shows the current architecture of the system and how the objects are made to interact with each other. The basis of the orbital system is the coordinate systems and how each planet can dictate the coordinate system it is deriving from the coordinate system tree. In the `do_update` method of the planet is where the appropriate calculations were put to update the position and rotation of the planet (or object) within each derived coordinate system.
+
+Having only used a UML diagram once for the rough schema of personal project, I was relatively new to the concept. I was given the task of creating a UML diagram for the project so that I may be able to understand it better when blocked.
+
+A major roadblock I had was the overall architecture of the project. How the individual parts were supposed to be setup, and work together within the project?
+Being able to conceptualise how things should fit together and think of the pseudocode was also a little trying. Creating the UML diagram helped me understand better.
+
 ## 3.4 Feedback from midterm evaluation and Reflections
 
 In this section I reflect on the internship in terms of my attitude towards it and feedback from my first evaluation. Regarding my initial goals, I shortly discuss my experiences; if I have achieved my goal, whether I experienced difficulties and what I think I have to improve. 
@@ -200,14 +213,27 @@ Other aspects to which I want to pay attention in general are: defining a clear 
 
 At the beginning I did not have any experience of working with a non- governmental organization (NGO). Trying to operate as a non-profit entity, I saw the importance of financial support and personal capacity. The dependence on extern institutions and the need to have a flexible but disciplined attitude. During the contribution stage I also experienced spontaneous fluctuations in the codebase. At first instance unannounced changes were annoying, but it forced me to be flexible and to see what other things I could do.
 
-More than I had expected I experienced communication difficulties. This was completely one-sided and not the fault of my mentors at all because they put so much effort into creating a welcoming space for me to ask anything. But I often needed multiple (more than three) explanations on the same thing to fully understand and didn’t want to burden them. To contribute more to projects and to progress faster, I want to learn to make a more confident impression and to express my ideas and opinions more certain.
+More than I had expected, I experienced communication difficulties. This was completely one-sided and not the fault of my mentors at all because they put so much effort into creating a welcoming space for me to ask anything. But I often needed multiple (more than three) explanations on the same thing to fully understand and didn’t want to burden them. To contribute more to projects and to progress faster, I want to learn to make a more confident impression and to express my ideas and opinions more certain.
 
 In conclusion, the internship was a useful experience. I have find out what my strengths and weaknesses are; I gained new knowledge and skills and met many new people. I achieved many of my learning goals, however for some the conditions did not permit to achieve them as I wanted. I got insight into what working with an NGO is like.
+
+# 4. Conclusion & Future Work
+
+In conclusion, the internship was a useful experience. I have find out what my strengths and weaknesses are; I gained new knowledge and skills and met many new people. I achieved many of my learning goals, however for some the conditions did not permit to achieve them as I wanted. I got insight into what working with an NGO is like.
+
+## 4.1 Conclusion
+
+The main goal of the project were not fully fulfilled which I am disappointed in myself about that.
+
+![Accomplished sections diagram](https://user-images.githubusercontent.com/100206676/195456064-98afca5c-6529-4a0f-87b7-e769a52d2073.png)
+
+The diagram (Figure 3) above shows in coloured boxes, what was achieved during the time of my attachment to the organisation. If you can recall, the proposed sections to be worked on were the coordinate systems, celestial bodies, propagator, and small bodies.
+
+There is room for a lot of improvement in terms of my coding capabilities and consistency. On the whole, this internship was a useful experience. I have gained new knowledge, skills and met new people. I achieved some of my project goals, however for some the conditions did not permit. I got insight into professional practice.
 
 ## 4.2 Future Work
 
 Since I was not able to finish the intended aim of the project, I plan to continue with the organisation to try to reach the goals initially proposed over the next month. Then continue to contribute to the project in whatever capacity I can indefinitely.
-
  
 # References
 
