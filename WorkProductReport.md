@@ -210,9 +210,7 @@ Other aspects to which I want to pay attention in general are: defining a clear 
 
 At the beginning I did not have any experience of working with a non- governmental organization (NGO). Trying to operate as a non-profit entity, I saw the importance of financial support and personal capacity. The dependence on extern institutions and the need to have a flexible but disciplined attitude. During the contribution stage I also experienced spontaneous fluctuations in the codebase. At first instance unannounced changes were annoying, but it forced me to be flexible and to see what other things I could do.
 
-More than I had expected, I experienced communication difficulties. This was completely one-sided and not the fault of my mentors at all because they put so much effort into creating a welcoming space for me to ask anything. But I often needed multiple (more than three) explanations on the same thing to fully understand and didn’t want to burden them. To contribute more to projects and to progress faster, I want to learn to make a more confident impression and to express my ideas and opinions more certain.
-
-In conclusion, the internship was a useful experience. I have find out what my strengths and weaknesses are; I gained new knowledge and skills and met many new people. I achieved many of my learning goals, however for some the conditions did not permit to achieve them as I wanted. I got insight into what working with an NGO is like.
+More than I had expected, I experienced communication difficulties. This was completely one-sided and not the fault of my mentors at all because they put so much effort into creating a welcoming space for me to ask anything. But I often needed multiple (more than three) explanations on the same thing to fully understand and didn’t want to burden them. To contribute more to projects and to progress faster, I want to learn to make a more confident impression and to express my ideas and opinions more certainly.
 
 # 4. Conclusion & Future Work
 
